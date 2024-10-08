@@ -148,8 +148,14 @@ document.getElementById('solarsysstem').addEventListener('mouseleave', function(
   ball.style.display = 'block'; // Or 'inline-block' if it was inline before
   dot.style.display = 'block'; // Or 'inline-block' if it was inline before
 });
-let menu = document.querySelector('.menu')
-let navmenu = document.querySelector('.navmenucount')
-menu.onclick = function (){
-  navmenu.classList.toggle('active')
+let menu = document.querySelector('.menu');
+let navmenu = document.querySelector('.navmenucount');
+let closeButton = document.querySelector('.close-menu');
+
+menu.onclick = function () {
+    navmenu.classList.toggle('active');
+}
+
+closeButton.onclick = function () {
+    navmenu.classList.remove('active'); // Remove the active class
 }
