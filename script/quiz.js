@@ -1,8 +1,15 @@
-let menu = document.querySelector('.menu')
-let navmenu = document.querySelector('.navmenucount')
-menu.onclick = function (){
-  navmenu.classList.toggle('active')
+let menu = document.querySelector('.menu');
+let navmenu = document.querySelector('.navmenucount');
+let closeButton = document.querySelector('.close-menu');
+
+menu.onclick = function () {
+    navmenu.classList.toggle('active');
 }
+
+closeButton.onclick = function () {
+    navmenu.classList.remove('active'); // Remove the active class
+}
+
 // Mouse konumunu ve dot/ball pozisyonlarını tutan değişkenler
 var mouse = {
   x: window.innerWidth / 2,
