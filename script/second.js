@@ -18,11 +18,7 @@ window.addEventListener('scroll', function() {
     Asteroid2.style.rotate = rotate + 'deg';
     Asteroid3.style.rotate = rotate + 'deg';
 });
-let menu = document.querySelector('.menu')
-let navmenu = document.querySelector('.navmenucount')
-menu.onclick = function (){
-  navmenu.classList.toggle('active')
-}
+
 // Mouse konumunu ve dot/ball pozisyonlarını tutan değişkenler
 var mouse = {
     x: window.innerWidth / 2,
@@ -84,3 +80,17 @@ var mouse = {
         y: ballPos.y,
     });
   });
+
+/////navbar
+
+let menu = document.querySelector('.menu');
+let navmenu = document.querySelector('.navmenucount');
+let closeButton = document.querySelector('.close-menu');
+
+menu.onclick = function () {
+    navmenu.classList.toggle('active');
+}
+
+closeButton.onclick = function () {
+    navmenu.classList.remove('active'); // Remove the active class
+}
